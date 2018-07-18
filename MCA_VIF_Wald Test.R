@@ -26,6 +26,9 @@ mca1$eig
 
 mca1$var
 
+factors <- names(Sepsis_Jan17_Mar18_AllVitals_Gre2days[c(16:71,212:267)])
+as.formula(paste("Sepsis~", paste(factors, collapse="+")))
+
 
 # Efficient way to calculating VIF - run vif , var with highest 
 #vif value is removed and then re-run vif  in this process till all vars have vif < 10
